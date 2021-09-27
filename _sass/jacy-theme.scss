@@ -1,14 +1,18 @@
 $red: #F03E3E;
-$blue: #4ACBF2;
 $dark-red: #A90C1B;
+
+$blue: #4ACBF2;
+
 $orange: #F2AC49;
 $dark-orange: #F28F49;
-$yellow: #F2E649;
-$light-green: #E1F249;
-$pink: #F249B1;
+
 $green: #B2BF54;
+$light-green: #E1F249;
+$yellow: #F2E649;
+
 $cyan: #4AF2E2;
 $purple: #BF49F2;
+$pink: #F249B1;
 
 $background: #fbfbfb;
 $foreground: #6C7176;
@@ -39,7 +43,7 @@ pre.code-highlight {
     }
 
     .string {
-        color: $light-green;
+        color: $green;
     }
 
     .constant {
