@@ -7,13 +7,16 @@ $Jacy-analogous-orange: #F0973E;
 $Jacy-analogous-pink: #F03E97;
 $Jacy-complementary-cyan: #3EF0F0;
 
+$background: #fcfcfc;
 $foreground: #5C6166;
 
 header.page-header {
     padding: 1rem;
+    display: none;
 }
 
 pre.code-highlight {
+    background: $background;
     color: $foreground;
 
     .func {
@@ -25,7 +28,7 @@ pre.code-highlight {
     }
 
     .keyword {
-        color: $Jacy-analogous-orange;
+        color: $Jacy-tetradic-red;
     }
 
     .string {
