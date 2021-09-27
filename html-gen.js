@@ -1,3 +1,45 @@
+// const regexps = {
+//     $ignore: /^[ \t\n]$/,
+//     string: /(\"([^\\\"]|\\.)*\")/,
+//     keyword: [
+//         /(\b(pub|const|type|enum|struct|trait|static|func|party)\b)/,
+//         /(\b(else)\b)/,
+//         /\b(break|continue|elif|if|in|for|loop|match|return|while)\b/,
+//         /(_)/,
+//     ],
+//     modifier: [
+//         /\b(mut)\b/,
+//         /\b(ref)\b/,
+//     ],
+//     terminator: /(;)/,
+//     separator: /(,)/,
+//     punctuation: /(::|\{|\}|\(|\)|\[|\])/,
+//     operator: [
+//         /(\+=|-=|\/=|\*=|%=|\^=|&=|\\|=|<<=|>>=|=)/,
+//         /(<=|>=|<|>|==|!=)/,
+//         /(!|\+(?!\+)|-(?!-)|\/|\*|%|\^|\&|\||<<|>>)/,
+//         /\b(and|or)\b/,
+//         /:(?!:)/,
+//     ],
+//     constant: [
+//         /\b(true|false)\b/,
+//         /(([0-9][0-9_]*)(?:([ui](?:8|16|32|64|128)|i|u))?)/,
+//         /((0x[a-fA-F0-9_]+)(?:([ui](?:8|16|32|64|128)|i|u))?)/,
+//         /((0o[0-7_]+)(?:([ui](?:8|16|32|64|128)|i|u))?)/,
+//         /((0b[01_]+)(?:([ui](?:8|16|32|64|128)|i|u))?)/,
+//         /(([0-9][0-9_]*\.[0-9][0-9_]*))/,
+//         /(([0-9][0-9_]*(?:\.[0-9][0-9_]*)?)(f32|f64|f|d))/,
+//         /(([0-9][0-9_]*(?:\.[0-9][0-9_]*)?[eE][+-]?[0-9_]+)(f32|f64|f|d)?)/,
+//     ],
+//     type: [
+//         /([A-Z][a-zA-Z0-9_]+)/,
+//         /\b(bool|char|[ui](?:8|16|32|64|128)|f(?:16|32|64|128)|int|uint|str|String|Self|Option|Result)\b/,
+//     ],
+//     func: /([\w_]+)(?=\()/,
+//     variable: /(\w+)/,
+//     other: /(\W)/,
+// }
+
 const fs = require('fs')
 const path = require('path')
 
@@ -7,47 +49,45 @@ func foo(kek: int, mut ref lol: &str) {
 }
 `.trim()
 
-const regexps = {
-    $ignore: /^[ \t\n]$/g,
-    string: /(\"([^\\\"]|\\.)*\")/g,
-    keyword: [
-        /\b(pub|const|type|enum|struct|trait|static|func|party)\b/g,
-        /\b(else)\b/g,
-        /\b(break|continue|elif|if|in|for|loop|match|return|while)\b/g,
-        /(_)/g,
-    ],
-    modifier: [
-        /\b(mut)\b/g,
-        /\b(ref)\b/g,
-    ],
-    terminator: /(;)/g,
-    separator: /(,)/g,
-    punctuation: /(::|\{|\}|\(|\)|\[|\])/g,
-    operator: [
-        /(\+=|-=|\/=|\*=|%=|\^=|&=|\\|=|<<=|>>=|=)/g,
-        /(<=|>=|<|>|==|!=)/g,
-        /(!|\+(?!\+)|-(?!-)|\/|\*|%|\^|\&|\||<<|>>)/g,
-        /\b(and|or)\b/g,
-        /:(?!:)/g,
-    ],
-    constant: [
-        /\b(true|false)\b/g,
-        /(([0-9][0-9_]*)(?:([ui](?:8|16|32|64|128)|i|u))?)/g,
-        /((0x[a-fA-F0-9_]+)(?:([ui](?:8|16|32|64|128)|i|u))?)/g,
-        /((0o[0-7_]+)(?:([ui](?:8|16|32|64|128)|i|u))?)/g,
-        /((0b[01_]+)(?:([ui](?:8|16|32|64|128)|i|u))?)/g,
-        /(([0-9][0-9_]*\.[0-9][0-9_]*))/g,
-        /(([0-9][0-9_]*(?:\.[0-9][0-9_]*)?)(f32|f64|f|d))/g,
-        /(([0-9][0-9_]*(?:\.[0-9][0-9_]*)?[eE][+-]?[0-9_]+)(f32|f64|f|d)?)/g,
-    ],
-    type: [
-        /([A-Z][a-zA-Z0-9_]+)/g,
-        /\b(bool|char|[ui](?:8|16|32|64|128)|f(?:16|32|64|128)|int|uint|str|String|Self|Option|Result)\b/g,
-    ],
-    func: /([a-z_][\w_]+(?=\())/g,
-    variable: /(\w+)/,
-    other: /(\W)/,
-}
+const regexps = [
+    /(?<$ignore>^[ \t\n]$)/,
+
+    /(?<string>(\"([^\\\"]|\\.)*\"))/,
+
+    /(?<keyword>(\b(pub|const|type|enum|struct|trait|static|func|party)\b))/,
+    /(?<keyword>(\b(else)\b))/,
+    /(?<keyword>\b(break|continue|elif|if|in|for|loop|match|return|while)\b)/,
+    /(?<keyword>(_))/,
+
+    /(?<modifier>\b(mut)\b)/,
+    /(?<modifier>\b(ref)\b)/,
+
+    /(?<terminator>(;))/,
+    /(?<separator>(,))/,    
+    /(?<punctuation>(::|\{|\}|\(|\)|\[|\]))/,
+
+    /(?<operator>(\+=|-=|\/=|\*=|%=|\^=|&=|\\|=|<<=|>>=|=))/,
+    /(?<operator>(<=|>=|<|>|==|!=))/,
+    /(?<operator>(!|\+(?!\+)|-(?!-)|\/|\*|%|\^|\&|\||<<|>>))/,
+    /(?<operator>\b(and|or)\b)/,
+    /(?<operator>:(?!:))/,
+
+    /(?<constant>\b(true|false)\b)/,
+    /(?<constant>(([0-9][0-9_]*)(?:([ui](?:8|16|32|64|128)|i|u))?))/,
+    /(?<constant>((0x[a-fA-F0-9_]+)(?:([ui](?:8|16|32|64|128)|i|u))?))/,
+    /(?<constant>((0o[0-7_]+)(?:([ui](?:8|16|32|64|128)|i|u))?))/,
+    /(?<constant>((0b[01_]+)(?:([ui](?:8|16|32|64|128)|i|u))?))/,
+    /(?<constant>(([0-9][0-9_]*\.[0-9][0-9_]*)))/,
+    /(?<constant>(([0-9][0-9_]*(?:\.[0-9][0-9_]*)?)(f32|f64|f|d)))/,
+    /(?<constant>(([0-9][0-9_]*(?:\.[0-9][0-9_]*)?[eE][+-]?[0-9_]+)(f32|f64|f|d)?))/,
+
+    /(?<type>([A-Z][a-zA-Z0-9_]+))/,
+    /(?<type>\b(bool|char|[ui](?:8|16|32|64|128)|f(?:1…|128)|int|uint|str|String|Self|Option|Result)\b)/,
+
+    /(?<func>([\w_]+)(?=\())/,
+    /(?<variable>(\w+))/,
+    /(?<other>(\W))/
+]
 
 const fullRegex = new RegExp(Object.values(regexps).map(r => {
     if (Array.isArray(r)) {
@@ -57,7 +97,7 @@ const fullRegex = new RegExp(Object.values(regexps).map(r => {
     } else {
         return r.source
     }
-}).join('|'), 'gm')
+}).join('|'), 'g')
 
 const tmpl = (rule, m) => {
     if (rule === '$ignore') {
@@ -69,7 +109,12 @@ const tmpl = (rule, m) => {
 }
 
 const process = (src, theme) => {
-    const hl = src.replace(fullRegex, m => {
+    const hl = src.replace(fullRegex, (m, ...args) => {
+        // console.log(m, ...args);
+        // m = args.slice(0, args.length - 2).filter(el => !!el)[0]
+        // if (!m) {
+        // throw new Error('wtf')
+        // }
         for (const [rule, regex] of Object.entries(regexps)) {
             // !Array.isArray(regex) && console.log(`check '${m}' for`, rule, regex)
 
@@ -84,6 +129,7 @@ const process = (src, theme) => {
                 return tmpl(rule, m)
             }
         }
+
         throw new Error(`WTF???!?!?!: '${m}'`)
     })
 
