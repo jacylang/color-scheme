@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 const code = `
-func foo(kek: int, lol: &str) {
+func foo(kek: int, mut ref lol: &str) {
     foo(kek: 123, lol: "Hello, world!");
 }
 `.trim()
@@ -17,8 +17,8 @@ const regexps = {
         /(_)/g,
     ],
     modifier: [
-        /(mut|ref)/g,
-        /(&)(?=\w+)/g,
+        /\b(mut)\b/g,
+        /\b(ref)\b/g,
     ],
     terminator: /(;)/g,
     separator: /(,)/g,
