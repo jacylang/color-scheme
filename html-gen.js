@@ -90,5 +90,12 @@ ${hl}
     `.trim()
 }
 
+const themes = ['light', 'dimmed', 'dark']
+let res = ''
+
+for (const th of themes) {
+    res += process(code, th) + '\n'
+}
+
 const outPath = path.join(__dirname, './out.html')
-fs.writeFileSync(outPath, process(code))
+fs.writeFileSync(outPath, process(res))
