@@ -44,7 +44,7 @@ const regexps = {
         /([A-Z][a-zA-Z0-9_]+)/g,
         /\b(bool|char|[ui](?:8|16|32|64|128)|f(?:16|32|64|128)|int|uint|str|String|Self|Option|Result)\b/g,
     ],
-    func: /([a-z_][\w_]+\s*(?=\())/g,
+    func: /([a-z_][\w_]+(?=\())/g,
     variable: /(\w+)/,
     other: /(\W)/,
 }
