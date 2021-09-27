@@ -53,4 +53,19 @@ pre.code-highlight {
     .constant {
         color: $purple;
     }
+
+    .label {
+        color: $dark-red;
+    }
+
+    .terminator {
+    }
+
+    .separator {
+        color: darken($foreground, 5%);
+    }
+
+    .punctuation {
+        color: darken($foreground, 2%);
+    }
 }
