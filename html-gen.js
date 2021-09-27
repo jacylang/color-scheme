@@ -16,7 +16,6 @@ const regexps = {
         /\b(break|continue|elif|if|in|for|loop|match|return|while)\b/g,
         /(_)/g,
     ],
-    label: /(\w+)(?::)/g,
     terminator: /(;)/g,
     separator: /(,|:(?!:))/g,
     punctuation: /(::|\{|\}|\(|\)|\[|\])/g,
