@@ -8,6 +8,7 @@ func foo(kek: int, lol: &str) {
 `.trim()
 
 const regexps = {
+    $ignore: /[ \t\n]/g,
     string: /(\"([^\\\"]|\\.)*\")/g,
     keyword: [
         /\b(pub|const|type|enum|struct|trait|static|func|party|mut)\b/g,
@@ -26,7 +27,10 @@ const regexps = {
         /(([0-9][0-9_]*(?:\.[0-9][0-9_]*)?)(f32|f64|f|d))/g,
         /(([0-9][0-9_]*(?:\.[0-9][0-9_]*)?[eE][+-]?[0-9_]+)(f32|f64|f|d)?)/g,
     ],
-    type: /([A-Z][a-zA-Z0-9_]+)/g,
+    type: [
+        /([A-Z][a-zA-Z0-9_]+)/g,
+        /\b(bool|char|[ui](?:8|16|32|64|128)|f(?:16|32|64|128)|int|uint|str|String|Self|Option|Result)\b/g,
+    ],
     func: /([a-z_][\w_]+\s*(?=\())/g,
     variable: /(\w+)/,
     other: /(\W)/,
@@ -43,6 +47,9 @@ const fullRegex = new RegExp(Object.values(regexps).map(r => {
 }).join('|'), 'gm')
 
 const tmpl = (rule, m) => {
+    if (rule === '$ignore') {
+        return m
+    }
     return `
 <span class="${rule}">${m}</span>
     `.trim()
@@ -69,7 +76,7 @@ const process = src => {
 
     return `
 <pre class="code-highlight">
-    ${hl}
+${hl}
 </pre>
     `.trim()
 }
