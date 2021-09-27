@@ -8,7 +8,7 @@ func foo(kek: int, lol: &str) {
 `.trim()
 
 const regexps = {
-    $ignore: /[ \t\n]/g,
+    $ignore: /^[ \t\n]$/g,
     string: /(\"([^\\\"]|\\.)*\")/g,
     keyword: [
         /\b(pub|const|type|enum|struct|trait|static|func|party|mut)\b/g,
