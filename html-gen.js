@@ -20,7 +20,7 @@ const regexps = [
     /(?<modifier_mut>\b(mut)\b)/,
     /(?<modifier_ref>\b(ref)\b)/,
 
-    /(?<func>(\w+)(?=[\(]))/,
+    // /(?<func>(\w+))(?\()/,
 
     /(?<terminator>(;))/,
     /(?<separator>(,))/,    
@@ -67,6 +67,7 @@ const tmpl = (rule, m) => {
 
 const process = (src, theme) => {
     const hl = src.replace(fullRegex, (m, ...args) => {
+        // console.log(m);
         // m = args.slice(0, args.length - 2).filter(el => !!el)[0]
         // if (!m) {
         // throw new Error('wtf')
@@ -78,15 +79,17 @@ const process = (src, theme) => {
                 continue
             }
 
-            console.log('match', match);
 
             const rule = Object.keys(match.groups)[0]
+            const str =  match.groups[rule]
+
+            console.log(rule, `'${str}'`, match);
 
             if (!rule) {
                 throw new Error('Wtf 2.0')
             }
 
-            return tmpl(rule, match.groups[rule])
+            return tmpl(rule, str)
         }
 
         throw new Error(`WTF???!?!?!: '${m}'`)
