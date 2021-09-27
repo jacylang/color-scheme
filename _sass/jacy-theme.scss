@@ -8,27 +8,99 @@ a {
     text-decoration-color: #F25858;
 }
 
-pre.code-highlight.light-theme {
+pre.code-highlight.light-theme {    
+    $background: #fbfbfb;
+    $foreground: #686465;
+
     $red: #F25858;
     $dark-red: #A90C1B;
     $red-dimmed: #E36868;
 
     $blue: #10B6E8;
-    
+
     $orange: #F2AC49;
     $dark-orange: #F28F49;
-    
+
     $green: #7BC768;
     $light-green: #E1F249;
-    
+
     $yellow: #F2DA57;
     
     $cyan: #4AF2E2;
     $purple: #A558A6;
     $pink: #F249B1;
     
-    $background: #fbfbfb;
-    $foreground: #686465;
+    $foreground-dimmed: #9F9B9C;
+
+    background: $background;
+    color: $foreground;
+
+    .func {
+        color: $orange;
+    }
+
+    .type {
+        color: $blue;
+    }
+
+    .keyword {
+        color: $red;
+    }
+
+    .operator {
+        color: $dark-orange;
+    }
+
+    .modifier {
+        color: $dark-orange;
+    }
+
+    .string {
+        color: $green;
+    }
+
+    .label {
+        color: $red-dimmed;
+    }
+
+    .constant {
+        color: $purple;
+    }
+
+    .terminator {
+        color: $foreground-dimmed;
+    }
+
+    .separator {
+        color: darken($foreground, 5%);
+    }
+
+    .punctuation {
+        color: darken($foreground, 2%);
+    }
+}
+
+pre.code-highlight.dimmed-theme {    
+    $background: #1D2020;
+    $foreground: #EAE9E9;
+
+    $red: #F25858;
+    $dark-red: #A90C1B;
+    $red-dimmed: #E36868;
+
+    $blue: #10B6E8;
+
+    $orange: #F2AC49;
+    $dark-orange: #F28F49;
+
+    $green: #7BC768;
+    $light-green: #E1F249;
+
+    $yellow: #F2DA57;
+    
+    $cyan: #4AF2E2;
+    $purple: #A558A6;
+    $pink: #F249B1;
     
     $foreground-dimmed: #9F9B9C;
 
