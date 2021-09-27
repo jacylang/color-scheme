@@ -11,10 +11,14 @@ const regexps = {
     $ignore: /^[ \t\n]$/g,
     string: /(\"([^\\\"]|\\.)*\")/g,
     keyword: [
-        /\b(pub|const|type|enum|struct|trait|static|func|party|mut)\b/g,
+        /\b(pub|const|type|enum|struct|trait|static|func|party)\b/g,
         /\b(else)\b/g,
         /\b(break|continue|elif|if|in|for|loop|match|return|while)\b/g,
         /(_)/g,
+    ],
+    modifier: [
+        /(mut|ref)/g,
+        /(&)(?=\w+)/g,
     ],
     terminator: /(;)/g,
     separator: /(,)/g,
