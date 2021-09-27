@@ -17,6 +17,8 @@ $pink: #F249B1;
 $background: #fbfbfb;
 $foreground: #7a7d84;
 
+$foreground-dimmed: #97999F;
+
 header.page-header {
     padding: 1rem;
     display: none;
@@ -59,6 +61,7 @@ pre.code-highlight {
     }
 
     .terminator {
+        color: $foreground-dimmed;
     }
 
     .separator {
