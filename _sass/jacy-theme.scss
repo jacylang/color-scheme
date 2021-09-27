@@ -1,7 +1,8 @@
 $red: #F03E3E;
 $blue: #4ACBF2;
 $dark-red: #A90C1B;
-$orange: #F28F49;
+$orange: #F2AC49;
+$dark-orange: #F28F49;
 $yellow: #F2E649;
 $light-green: #E1F249;
 $pink: #F249B1;
@@ -31,6 +32,10 @@ pre.code-highlight {
 
     .keyword {
         color: $red;
+    }
+
+    .modifier {
+        color: $dark-orange;
     }
 
     .string {
