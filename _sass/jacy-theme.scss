@@ -1,11 +1,13 @@
-$Jacy-tetradic-red: #F03E3E;
-$Jacy-tetradic-green: #97F03E;
-$Jacy-tetradic-blue: #3EF0F0;
-$Jacy-tetradic-purple: #973EF0;
-$Jacy-triadic-blue: #3E3EF0;
-$Jacy-analogous-orange: #F0973E;
-$Jacy-analogous-pink: #F03E97;
-$Jacy-complementary-cyan: #3EF0F0;
+$red: #F03E3E;
+$blue: #4ACBF2;
+$dark-red: #A90C1B;
+$orange: #F28F49;
+$yellow: #F2E649;
+$light-green: #E1F249;
+$pink: #F249B1;
+$green: #4AF2A9;
+$cyan: #4AF2E2;
+$purple: #BF49F2;
 
 $background: #fbfbfb;
 $foreground: #6C7176;
@@ -20,22 +22,22 @@ pre.code-highlight {
     color: $foreground;
 
     .func {
-        color: $Jacy-analogous-orange;
+        color: $orange;
     }
 
     .type {
-        color: $Jacy-triadic-blue;
+        color: $blue;
     }
 
     .keyword {
-        color: $Jacy-tetradic-red;
+        color: $red;
     }
 
     .string {
-        color: $Jacy-tetradic-green;
+        color: $green;
     }
 
     .constant {
-        color: $Jacy-tetradic-purple;
+        color: $purple;
     }
 }
