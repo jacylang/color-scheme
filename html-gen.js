@@ -67,11 +67,11 @@ const tmpl = (rule, m) => {
 const process = (src, theme) => {
     const hl = src.replace(fullRegex, m => {
         for (const [rule, regex] of Object.entries(regexps)) {
-            !Array.isArray(regex) && console.log(`check '${m}' for`, rule, regex)
+            // !Array.isArray(regex) && console.log(`check '${m}' for`, rule, regex)
 
             if (Array.isArray(regex)) {
                 for (const r of regex) {
-                    console.log(`check '${m}' for`, rule, r)
+                    // console.log(`check '${m}' for`, rule, r)
                     if (r.test(m)) {
                         return tmpl(rule, m)
                     }
@@ -94,8 +94,8 @@ const themes = ['light', 'dimmed', 'dark']
 let res = ''
 
 for (const th of themes) {
-    res += process(code, th) + '\n'
+    res += process(code, th) + '\n\n'
 }
 
 const outPath = path.join(__dirname, './out.html')
-fs.writeFileSync(outPath, process(res))
+fs.writeFileSync(outPath, res)
