@@ -14,54 +14,58 @@
 		<text font-family="sans-serif" font-size="13" y="3em" x="87.5%" fill="#565b66">Dark</text>
 	</g>
 
+	<!-- #a2afeb -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="4.8em" rx="2" ry="2" fill="#55b4d4" />
+		<rect height="1.8em" width="20%" x="27.5%" y="4.8em" rx="2" ry="2" fill="#a2afeb" />
 		<rect height="1.8em" width="20%" x="52.5%" y="4.8em" rx="2" ry="2" fill="#5ccfe6" />
 		<rect height="1.8em" width="20%" x="77.5%" y="4.8em" rx="2" ry="2" fill="#39bae6" />
 	</g>
 
 	<g font-family="sans-serif" font-size="12">
 		<text y="6.5em" x="12.5%" fill="333333">syntax.tag</text>
-		<text y="6.5em" x="37.5%" fill="#000000">#55B4D4</text>
+		<text y="6.5em" x="37.5%" fill="#000000">#3EF0F0</text>
 		<text y="6.5em" x="62.5%" fill="#000000">#5CCFE6</text>
 		<text y="6.5em" x="87.5%" fill="#000000">#39BAE6</text>
 	</g>
 
+	<!-- #F7D08A -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="7.8em" rx="2" ry="2" fill="#f2ae49" />
+		<rect height="1.8em" width="20%" x="27.5%" y="7.8em" rx="2" ry="2" fill="#F7D08A" />
 		<rect height="1.8em" width="20%" x="52.5%" y="7.8em" rx="2" ry="2" fill="#ffd173" />
 		<rect height="1.8em" width="20%" x="77.5%" y="7.8em" rx="2" ry="2" fill="#ffb454" />
 	</g>
 
 	<g font-family="sans-serif" font-size="12">
 		<text y="9.75em" x="12.5%" fill="333333">syntax.func</text>
-		<text y="9.75em" x="37.5%" fill="#000000">#F2AE49</text>
+		<text y="9.75em" x="37.5%" fill="#000000">#F7D08A</text>
 		<text y="9.75em" x="62.5%" fill="#000000">#FFD173</text>
 		<text y="9.75em" x="87.5%" fill="#000000">#FFB454</text>
 	</g>
 
+	<!-- #a2afeb -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="10.8em" rx="2" ry="2" fill="#399ee6" />
+		<rect height="1.8em" width="20%" x="27.5%" y="10.8em" rx="2" ry="2" fill="#a2afeb" />
 		<rect height="1.8em" width="20%" x="52.5%" y="10.8em" rx="2" ry="2" fill="#73d0ff" />
 		<rect height="1.8em" width="20%" x="77.5%" y="10.8em" rx="2" ry="2" fill="#59c2ff" />
 	</g>
 
 	<g font-family="sans-serif" font-size="12">
 		<text y="13em" x="12.5%" fill="333333">syntax.entity</text>
-		<text y="13em" x="37.5%" fill="#000000">#399EE6</text>
+		<text y="13em" x="37.5%" fill="#000000">#A2AFEB</text>
 		<text y="13em" x="62.5%" fill="#000000">#73D0FF</text>
 		<text y="13em" x="87.5%" fill="#000000">#59C2FF</text>
 	</g>
 
+	<!-- #81f495 -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="13.8em" rx="2" ry="2" fill="#86b300" />
+		<rect height="1.8em" width="20%" x="27.5%" y="13.8em" rx="2" ry="2" fill="#81f495" />
 		<rect height="1.8em" width="20%" x="52.5%" y="13.8em" rx="2" ry="2" fill="#d5ff80" />
 		<rect height="1.8em" width="20%" x="77.5%" y="13.8em" rx="2" ry="2" fill="#aad94c" />
 	</g>
 
 	<g font-family="sans-serif" font-size="12">
 		<text y="16.25em" x="12.5%" fill="333333">syntax.string</text>
-		<text y="16.25em" x="37.5%" fill="#000000">#86B300</text>
+		<text y="16.25em" x="37.5%" fill="#000000">#81F495</text>
 		<text y="16.25em" x="62.5%" fill="#000000">#D5FF80</text>
 		<text y="16.25em" x="87.5%" fill="#000000">#AAD94C</text>
 	</g>
@@ -79,47 +83,51 @@
 		<text y="19.5em" x="87.5%" fill="#000000">#95E6CB</text>
 	</g>
 
+	<!-- #c44f64 -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="19.8em" rx="2" ry="2" fill="#f07171" />
+		<rect height="1.8em" width="20%" x="27.5%" y="19.8em" rx="2" ry="2" fill="#c44f64" />
 		<rect height="1.8em" width="20%" x="52.5%" y="19.8em" rx="2" ry="2" fill="#f28779" />
 		<rect height="1.8em" width="20%" x="77.5%" y="19.8em" rx="2" ry="2" fill="#f07178" />
 	</g>
 
 	<g font-family="sans-serif" font-size="12">
 		<text y="22.75em" x="12.5%" fill="333333">syntax.markup</text>
-		<text y="22.75em" x="37.5%" fill="#000000">#F07171</text>
+		<text y="22.75em" x="37.5%" fill="#000000">#C44F64</text>
 		<text y="22.75em" x="62.5%" fill="#000000">#F28779</text>
 		<text y="22.75em" x="87.5%" fill="#000000">#F07178</text>
 	</g>
 
+	<!-- #e0b380 -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="22.8em" rx="2" ry="2" fill="#fa8d3e" />
+		<rect height="1.8em" width="20%" x="27.5%" y="22.8em" rx="2" ry="2" fill="#e0b380" />
 		<rect height="1.8em" width="20%" x="52.5%" y="22.8em" rx="2" ry="2" fill="#ffad66" />
 		<rect height="1.8em" width="20%" x="77.5%" y="22.8em" rx="2" ry="2" fill="#ff8f40" />
 	</g>
 
 	<g font-family="sans-serif" font-size="12">
 		<text y="26em" x="12.5%" fill="333333">syntax.keyword</text>
-		<text y="26em" x="37.5%" fill="#000000">#FA8D3E</text>
+		<text y="26em" x="37.5%" fill="#000000">#E0B380</text>
 		<text y="26em" x="62.5%" fill="#000000">#FFAD66</text>
 		<text y="26em" x="87.5%" fill="#000000">#FF8F40</text>
 	</g>
 
+	<!-- #e3b505 -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="25.8em" rx="2" ry="2" fill="#e6ba7e" />
+		<rect height="1.8em" width="20%" x="27.5%" y="25.8em" rx="2" ry="2" fill="#e3b505" />
 		<rect height="1.8em" width="20%" x="52.5%" y="25.8em" rx="2" ry="2" fill="#ffdfb3" />
 		<rect height="1.8em" width="20%" x="77.5%" y="25.8em" rx="2" ry="2" fill="#e6b673" />
 	</g>
 
 	<g font-family="sans-serif" font-size="12">
 		<text y="29.25em" x="12.5%" fill="333333">syntax.special</text>
-		<text y="29.25em" x="37.5%" fill="#000000">#E6BA7E</text>
+		<text y="29.25em" x="37.5%" fill="#000000">#E3B505</text>
 		<text y="29.25em" x="62.5%" fill="#000000">#FFDFB3</text>
 		<text y="29.25em" x="87.5%" fill="#000000">#E6B673</text>
 	</g>
 
+	<!-- #6C809AAA -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="28.8em" rx="2" ry="2" fill="#787b8099" />
+		<rect height="1.8em" width="20%" x="27.5%" y="28.8em" rx="2" ry="2" fill="#6C809AAA" />
 		<rect height="1.8em" width="20%" x="52.5%" y="28.8em" rx="2" ry="2" fill="#b8cfe680" />
 		<rect height="1.8em" width="20%" x="77.5%" y="28.8em" rx="2" ry="2" fill="#acb6bf8c" />
 	</g>
@@ -131,8 +139,9 @@
 		<text y="32.5em" x="87.5%" fill="#000000">#ACB6BF8C</text>
 	</g>
 
+	<!-- #6153CC -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="31.8em" rx="2" ry="2" fill="#a37acc" />
+		<rect height="1.8em" width="20%" x="27.5%" y="31.8em" rx="2" ry="2" fill="#6153CC" />
 		<rect height="1.8em" width="20%" x="52.5%" y="31.8em" rx="2" ry="2" fill="#dfbfff" />
 		<rect height="1.8em" width="20%" x="77.5%" y="31.8em" rx="2" ry="2" fill="#d2a6ff" />
 	</g>
@@ -144,8 +153,9 @@
 		<text y="35.75em" x="87.5%" fill="#000000">#D2A6FF</text>
 	</g>
 
+	<!-- #e3b505 -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="34.8em" rx="2" ry="2" fill="#ed9366" />
+		<rect height="1.8em" width="20%" x="27.5%" y="34.8em" rx="2" ry="2" fill="#e3b505" />
 		<rect height="1.8em" width="20%" x="52.5%" y="34.8em" rx="2" ry="2" fill="#f29e74" />
 		<rect height="1.8em" width="20%" x="77.5%" y="34.8em" rx="2" ry="2" fill="#f29668" />
 	</g>
@@ -157,8 +167,9 @@
 		<text y="39em" x="87.5%" fill="#000000">#F29668</text>
 	</g>
 
+	<!-- #4cbf99 -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="37.8em" rx="2" ry="2" fill="#6cbf43" />
+		<rect height="1.8em" width="20%" x="27.5%" y="37.8em" rx="2" ry="2" fill="#4cbf99" />
 		<rect height="1.8em" width="20%" x="52.5%" y="37.8em" rx="2" ry="2" fill="#87d96c" />
 		<rect height="1.8em" width="20%" x="77.5%" y="37.8em" rx="2" ry="2" fill="#7fd962" />
 	</g>
@@ -170,8 +181,9 @@
 		<text y="42.25em" x="87.5%" fill="#000000">#7FD962</text>
 	</g>
 
+	<!-- #a2afeb -->
 	<g>
-		<rect height="1.8em" width="20%" x="27.5%" y="40.8em" rx="2" ry="2" fill="#478acc" />
+		<rect height="1.8em" width="20%" x="27.5%" y="40.8em" rx="2" ry="2" fill="#a2afeb" />
 		<rect height="1.8em" width="20%" x="52.5%" y="40.8em" rx="2" ry="2" fill="#80bfff" />
 		<rect height="1.8em" width="20%" x="77.5%" y="40.8em" rx="2" ry="2" fill="#73b8ff" />
 	</g>
@@ -183,6 +195,7 @@
 		<text y="45.5em" x="87.5%" fill="#000000">#73B8FF</text>
 	</g>
 
+	<!-- #c44f64 -->
 	<g>
 		<rect height="1.8em" width="20%" x="27.5%" y="43.8em" rx="2" ry="2" fill="#ff7383" />
 		<rect height="1.8em" width="20%" x="52.5%" y="43.8em" rx="2" ry="2" fill="#f27983" />
@@ -196,6 +209,7 @@
 		<text y="48.75em" x="87.5%" fill="#000000">#F26D78</text>
 	</g>
 
+	<!--  -->
 	<g>
 		<rect height="1.8em" width="20%" x="27.5%" y="46.8em" rx="2" ry="2" fill="#5c6166" />
 		<rect height="1.8em" width="20%" x="52.5%" y="46.8em" rx="2" ry="2" fill="#cccac2" />
@@ -209,6 +223,7 @@
 		<text y="52em" x="87.5%" fill="#000000">#BFBDB6</text>
 	</g>
 
+	<!--  -->
 	<g>
 		<rect height="1.8em" width="20%" x="27.5%" y="49.8em" rx="2" ry="2" fill="#fcfcfc" />
 		<rect height="1.8em" width="20%" x="52.5%" y="49.8em" rx="2" ry="2" fill="#242936" />
