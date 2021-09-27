@@ -3,6 +3,11 @@ header.page-header {
     display: none;
 }
 
+a {
+    color: #F25858;
+    text-decoration-color: #F25858;
+}
+
 pre.code-highlight.light-theme {
     $red: #F25858;
     $dark-red: #A90C1B;
