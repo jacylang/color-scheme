@@ -1,5 +1,34 @@
----
----
+$Jacy-tetradic-red: #F03E3E;
+$Jacy-tetradic-green: #97F03E;
+$Jacy-tetradic-blue: #3EF0F0;
+$Jacy-tetradic-purple: #973EF0;
+$Jacy-triadic-blue: #3E3EF0;
+$Jacy-analogous-orange: #F0973E;
+$Jacy-analogous-pink: #F03E97;
+$Jacy-complementary-cyan: #3EF0F0;
 
-@import "{{site.theme}}";
-@import "jacy-theme.scss";
+$foreground: #5C6166;
+
+header.page-header {
+    padding: 1rem;
+}
+
+pre.code-highlight {
+    color: $foreground;
+
+    .func {
+        color: $Jacy-analogous-orange;
+    }
+
+    .entity {
+        color: $Jacy-tetradic-purple;
+    }
+
+    .keyword {
+        color: $Jacy-analogous-orange;
+    }
+
+    .string {
+        color: $Jacy-tetradic-green;
+    }
+}
