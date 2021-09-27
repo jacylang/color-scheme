@@ -3,30 +3,30 @@ header.page-header {
     display: none;
 }
 
-$red: #F25858;
-$dark-red: #A90C1B;
-$red-dimmed: #E36868;
-
-$blue: #10B6E8;
-
-$orange: #F2AC49;
-$dark-orange: #F28F49;
-
-$green: #7BC768;
-$light-green: #E1F249;
-
-$yellow: #F2DA57;
-
-$cyan: #4AF2E2;
-$purple: #A558A6;
-$pink: #F249B1;
-
-$background: #fbfbfb;
-$foreground: #686465;
-
-$foreground-dimmed: #9F9B9C;
-
-pre.code-highlight {
+pre.code-highlight.light {
+    $red: #F25858;
+    $dark-red: #A90C1B;
+    $red-dimmed: #E36868;
+    
+    $blue: #10B6E8;
+    
+    $orange: #F2AC49;
+    $dark-orange: #F28F49;
+    
+    $green: #7BC768;
+    $light-green: #E1F249;
+    
+    $yellow: #F2DA57;
+    
+    $cyan: #4AF2E2;
+    $purple: #A558A6;
+    $pink: #F249B1;
+    
+    $background: #fbfbfb;
+    $foreground: #686465;
+    
+    $foreground-dimmed: #9F9B9C;
+    
     background: $background;
     color: $foreground;
 
