@@ -1,3 +1,8 @@
+header.page-header {
+    padding: 1rem;
+    display: none;
+}
+
 $red: #F25858;
 $dark-red: #A90C1B;
 
@@ -18,11 +23,6 @@ $background: #fbfbfb;
 $foreground: #7a7d84;
 
 $foreground-dimmed: #97999F;
-
-header.page-header {
-    padding: 1rem;
-    display: none;
-}
 
 pre.code-highlight {
     background: $background;
