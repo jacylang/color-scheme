@@ -16,6 +16,10 @@ const regexps = {
         /\b(break|continue|elif|if|in|for|loop|match|return|while)\b/g,
         /(_)/g,
     ],
+    label: /(\w+)(?::)/g,
+    terminator: /(;)/g,
+    separator: /(,|:(?!:))/g,
+    punctuation: /(::|\{|\}|\(|\)|\[|\])/g,
     operator: /(\+=|-=|\/=|\*=|%=|\^=|&=|\\|=|<<=|>>=|=|<=|>=|<|>|==|!=|!|\+(?!\+)|-(?!-)|\/|\*|%|\^|&|\||<<|>>|\?|\!)|\b(and|or)\b/g,
     constant: [
         /\b(true|false)\b/g,
@@ -55,7 +59,7 @@ const tmpl = (rule, m) => {
     `.trim()
 }
 
-const process = src => {
+const process = (src, theme) => {
     const hl = src.replace(fullRegex, m => {
         for (const [rule, regex] of Object.entries(regexps)) {
             !Array.isArray(regex) && console.log(`check '${m}' for`, rule, regex)
@@ -75,7 +79,7 @@ const process = src => {
     })
 
     return `
-<pre class="code-highlight">
+<pre class="code-highlight ${theme}-theme">
 ${hl}
 </pre>
     `.trim()
