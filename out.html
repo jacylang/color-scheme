@@ -1,5 +1,5 @@
 <pre class="code-highlight">
 <span class="keyword">func</span> <span class="variable">foo</span><span class="other">(</span><span class="variable">kek</span><span class="other">:</span> <span class="type">int</span><span class="other">,</span> <span class="variable">lol</span><span class="other">:</span> <span class="operator">&</span><span class="type">str</span><span class="other">)</span> <span class="other">{</span>
-<span class="other"> </span> <span class="other"> </span> <span class="variable">foo</span><span class="other">(</span><span class="variable">kek</span><span class="other">:</span> <span class="constant">123</span><span class="other">,</span> <span class="variable">lol</span><span class="other">:</span> "Hello, world!"<span class="other">)</span><span class="other">;</span>
+<span class="other"> </span> <span class="other"> </span> <span class="variable">foo</span><span class="other">(</span><span class="variable">kek</span><span class="other">:</span> <span class="constant">123</span><span class="other">,</span> <span class="variable">lol</span><span class="other">:</span> <span class="string">"Hello, world!"</span><span class="other">)</span><span class="other">;</span>
 <span class="other">}</span>
 </pre>
