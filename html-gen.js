@@ -2,15 +2,18 @@ const fs = require('fs')
 const path = require('path')
 
 const code = `
-func else struct
+func foo(kek: int, lol: &str) {
+    foo(kek: 123, lol: "Hello, world!");
+}
 `.trim()
 
 const regexps = {
-    string: /("[^"])/g,
+    string: /(\"([^\\\"]|\\.)*\")/g,
     keyword: [
         /\b(pub|const|type|enum|struct|trait|static|func|party|mut)\b/g,
         /\b(else)\b/g,
-        /\b(break|continue|elif|if|in|for|loop|match|return|while)\b/,
+        /\b(break|continue|elif|if|in|for|loop|match|return|while)\b/g,
+        /(_)/g,
     ],
     operator: /(\+=|-=|\/=|\*=|%=|\^=|&=|\\|=|<<=|>>=|=|<=|>=|<|>|==|!=|!|\+(?!\+)|-(?!-)|\/|\*|%|\^|&|\||<<|>>|\?|\!)|\b(and|or)\b/g,
     constant: [
@@ -24,8 +27,9 @@ const regexps = {
         /(([0-9][0-9_]*(?:\.[0-9][0-9_]*)?[eE][+-]?[0-9_]+)(f32|f64|f|d)?)/g,
     ],
     type: /([A-Z][a-zA-Z0-9_]+)/g,
-    func: /([a-z_][a-zA-Z0-9_]+\s*(?=\())/g,
-    variable: /([a-z_][a-zA-Z0-9_]+)/g,
+    func: /([a-z_][\w_]+\s*(?=\())/g,
+    variable: /(\w+)/,
+    other: /(\W)/,
 }
 
 const fullRegex = new RegExp(Object.values(regexps).map(r => {
@@ -47,9 +51,11 @@ const tmpl = (rule, m) => {
 const process = src => {
     const hl = src.replace(fullRegex, m => {
         for (const [rule, regex] of Object.entries(regexps)) {
-            console.log('check', rule, regex, 'for', `'${m}'`);
+            !Array.isArray(regex) && console.log(`check '${m}' for`, rule, regex)
+
             if (Array.isArray(regex)) {
                 for (const r of regex) {
+                    console.log(`check '${m}' for`, rule, r)
                     if (r.test(m)) {
                         return tmpl(rule, m)
                     }
@@ -58,7 +64,7 @@ const process = src => {
                 return tmpl(rule, m)
             }
         }
-        throw new Error(`WTF???!?!?!`)
+        throw new Error(`WTF???!?!?!: '${m}'`)
     })
 
     return `
