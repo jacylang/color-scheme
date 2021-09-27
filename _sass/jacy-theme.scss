@@ -19,6 +19,7 @@ $yellow: #F2DA57;
 $cyan: #4AF2E2;
 $purple: #A558A6;
 $pink: #F249B1;
+$pink-soft: #FAB7B9;
 
 $background: #fbfbfb;
 $foreground: #7a7d84;
@@ -51,6 +52,10 @@ pre.code-highlight {
 
     .string {
         color: $green;
+    }
+
+    .label {
+        color: $pink-soft;
     }
 
     .constant {
