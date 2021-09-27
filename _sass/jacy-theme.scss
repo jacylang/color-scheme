@@ -3,11 +3,11 @@ header.page-header {
     display: none;
 }
 
-pre.code-highlight.light {
+pre.code-highlight.light-theme {
     $red: #F25858;
     $dark-red: #A90C1B;
     $red-dimmed: #E36868;
-    
+
     $blue: #10B6E8;
     
     $orange: #F2AC49;
@@ -26,7 +26,7 @@ pre.code-highlight.light {
     $foreground: #686465;
     
     $foreground-dimmed: #9F9B9C;
-    
+
     background: $background;
     color: $foreground;
 
