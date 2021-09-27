@@ -20,6 +20,8 @@ const regexps = [
     /(?<modifier_mut>\b(mut)\b)/,
     /(?<modifier_ref>\b(ref)\b)/,
 
+    /(?<func>(\w+)(?=[\(]))/,
+
     /(?<terminator>(;))/,
     /(?<separator>(,))/,    
     /(?<punctuation>(::|\{|\}|\(|\)|\[|\]))/,
@@ -42,7 +44,6 @@ const regexps = [
     /(?<type_word>([A-Z][a-zA-Z0-9_]+))/,
     /(?<type_builtin>\b(bool|char|[ui](?:8|16|32|64|128)|f(?:1…|128)|int|uint|str|String|Self|Option|Result)\b)/,
 
-    /(?<func>([\w_]+)(?=\())/,
     /(?<variable>(\w+))/,
     /(?<other>(\W))/
 ]
@@ -56,7 +57,7 @@ const tmpl = (rule, m) => {
     let classes = []
     let prefix = []
     for (const seg of rule.split('_')) {
-        classes.push(seg + prefix.join('.'))
+        classes.push([...prefix, seg].join('.'))
         prefix.push(seg)
     }
     return `
@@ -70,20 +71,22 @@ const process = (src, theme) => {
         // if (!m) {
         // throw new Error('wtf')
         // }
-        for (const [regex] of Object.entries(regexps)) {
+        for (const regex of regexps) {
             // !Array.isArray(regex) && console.log(`check '${m}' for`, rule, regex)
             const match = m.match(regex)
             if (!match) {
                 continue
             }
 
-            const rule = match.groups[Object.keys(match.groups)[0]]
+            console.log('match', match);
+
+            const rule = Object.keys(match.groups)[0]
 
             if (!rule) {
                 throw new Error('Wtf 2.0')
             }
 
-            return tmpl(rule, match[rule])
+            return tmpl(rule, match.groups[rule])
         }
 
         throw new Error(`WTF???!?!?!: '${m}'`)
